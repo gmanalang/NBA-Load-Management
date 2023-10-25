@@ -8,18 +8,17 @@ test
 """
 
 # cell 1
+import plotly.express as px
+import seaborn as sns
+import matplotlib.pyplot as plt
 import pandas as pd
 
-df = pd.read_csv("NBAAverages2022-2023.csv")
+df = pd.read_csv("src/NBAAverages2022-2023.csv")
 
 df
 
 # cell 2
-import matplotlib.pyplot as plt
-import seaborn as sns
-import plotly.express as px
 sns.set()
 
 # plots relationship between points and mpg
-px.scatter(df, x='PTS', y='MP', hover_data = ['Player'], title = 'PTS vs MPG')
-
+px.scatter(df, x='PTS', y='MP', hover_data=['Player'], title='PTS vs MPG')
